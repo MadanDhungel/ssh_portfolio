@@ -13,7 +13,7 @@ This is a Helm chart for deploying the SSH Portfolio application on Kubernetes.
 ### 1. Build Docker Image
 
 ```bash
-cd /home/madan/ssh-portfolio/app
+cd /home/$user/ssh-portfolio/app
 docker build -t ssh-portfolio:latest .
 ```
 

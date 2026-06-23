@@ -8,24 +8,30 @@ from ascii_art import DEVOPS_BANNER, SECTION_DIVIDER, ASCII_DOCKER, ASCII_KUBERN
 
 ALL = f"""{DEVOPS_BANNER}
 
-{section('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ABOUT ME ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')}
+{Colors.CYAN}{Colors.BOLD}📋 ABOUT ME{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {ABOUT}
 
-{section('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ TECHNICAL SKILLS ━━━━━━━━━━━━━━━━━━━━━━━━━')}
+{Colors.CYAN}{Colors.BOLD}🛠️  TECHNICAL SKILLS{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {SKILLS}
 
-{Colors.CYAN}Key Technologies:{Colors.RESET}
+{Colors.CYAN}{Colors.BOLD}🔑 KEY TECHNOLOGIES{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {ASCII_DOCKER}   {ASCII_KUBERNETES}   {ASCII_AWS}
 {ASCII_TERRAFORM}   {ASCII_GITHUB}
 
-{section('━━━━━━━━━━━━━━━━━━━━━━━ PROFESSIONAL EXPERIENCE ━━━━━━━━━━━━━━━━━━━━')}
+{Colors.CYAN}{Colors.BOLD}💼 PROFESSIONAL EXPERIENCE{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {PROJECTS}
 
-{section('━━━━━━━━━━━━━━━━━━━━━━ CERTIFICATIONS & EDUCATION ━━━━━━━━━━━━━━━━━━━')}
+{Colors.CYAN}{Colors.BOLD}🎓 CERTIFICATIONS & EDUCATION{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {CERTIFICATIONS}
 
-{section('━━━━━━━━━━━━━━━━━━━━━━ CONTACT INFORMATION ━━━━━━━━━━━━━━━━━━━━━━')}
+{Colors.CYAN}{Colors.BOLD}📧 CONTACT INFORMATION{Colors.RESET}
+{Colors.CYAN}{'─' * 78}{Colors.RESET}
 {CONTACT}
 
-{Colors.GREEN}{Colors.BOLD}Type 'help' for commands or select a specific section.{Colors.RESET}
+{Colors.GREEN}{Colors.BOLD}✨ Type 'help' for commands or select a specific section.{Colors.RESET}
 """

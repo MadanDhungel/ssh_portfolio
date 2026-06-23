@@ -62,7 +62,7 @@ ssh-portfolio/
 ### Option 1: Docker
 
 ```bash
-cd /home/madan/ssh-portfolio/app
+cd /home/$USER/ssh-portfolio/app
 docker build -t ssh-portfolio:latest .
 docker run -d -p 2222:2222 ssh-portfolio:latest
 ssh -p 2222 localhost
@@ -71,7 +71,7 @@ ssh -p 2222 localhost
 ### Option 2: Docker Compose
 
 ```bash
-cd /home/madan/ssh-portfolio/app
+cd /home/$USER/ssh-portfolio/app
 docker-compose up -d
 ssh -p 2222 localhost
 ```
@@ -79,7 +79,7 @@ ssh -p 2222 localhost
 ### Option 3: Kubernetes
 
 ```bash
-cd /home/madan/ssh-portfolio/app
+cd /home/$USER/ssh-portfolio/app
 docker build -t ssh-portfolio:latest .
 
 kubectl apply -f ../kubernetes/
@@ -90,7 +90,7 @@ ssh -p 2222 localhost
 ### Option 4: Helm
 
 ```bash
-cd /home/madan/ssh-portfolio/app
+cd /home/$USER/ssh-portfolio/app
 docker build -t ssh-portfolio:latest .
 
 helm install ssh-portfolio ./helm/ssh-portfolio/
