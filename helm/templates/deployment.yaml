@@ -15,17 +15,21 @@ spec:
       labels:
         app: ssh-portfolio
         version: {{ .Chart.AppVersion }}
-      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
+      {{- with .Values.podAnnotations }}
+{{ toYaml . | nindent 8 }}
+      {{- else }}
+        {}
       {{- end }}
+
     spec:
-      {{- if .Values.namespace.create }}
+      {{- if (default dict .Values.serviceAccount).create }}
       serviceAccountName: default
       {{- end }}
+
       {{- with .Values.podSecurityContext }}
       securityContext:
-        {{- toYaml . | nindent 8 }}
+{{ toYaml . | nindent 8 }}
       {{- end }}
       containers:
       - name: ssh-portfolio

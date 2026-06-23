@@ -1,12 +1,12 @@
 NOTES.txt - Post deployment instructions
 1. Get the service IP:
-  kubectl get svc ssh-portfolio -n {{ .Values.namespace.name }}
+  kubectl get svc ssh-portfolio -n portfolio
 
 2. Port forward to access SSH:
-  kubectl port-forward -n {{ .Values.namespace.name }} svc/ssh-portfolio 2222:2222
+  kubectl port-forward -n portfolio svc/ssh-portfolio 2222:2222
 
 3. Connect via SSH:
   ssh -p 2222 localhost
 
 4. View logs:
-  kubectl logs -n {{ .Values.namespace.name }} deployment/ssh-portfolio
+  kubectl logs -n portfolio deployment/ssh-portfolio
