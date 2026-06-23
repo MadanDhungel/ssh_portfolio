@@ -12,5 +12,5 @@ ABOUT = f"""{Colors.CYAN}{Colors.BOLD}👤 Name:{Colors.RESET}                  
 Strong expertise in {keyword('systems administration')}, {keyword('networking')}, & {keyword('automation')}.
 Proficient in {keyword('CI/CD pipelines')}, {keyword('Infrastructure as Code')}, & {keyword('containerization')}
 to drive {keyword('scalable, efficient')} deployments. Experienced securing & optimizing
-{{keyword('cloud')}} & {{keyword('on-premise')}} environments for performance & reliability.{Colors.RESET}
+{keyword('cloud')} & {keyword('on-premise')} environments for performance & reliability.{Colors.RESET}
 """
