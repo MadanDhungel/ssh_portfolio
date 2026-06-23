@@ -1,6 +1,3 @@
-# Default values for ssh-portfolio Helm chart
-
-# Namespace configuration
 namespace:
   name: ssh-portfolio
   create: true
