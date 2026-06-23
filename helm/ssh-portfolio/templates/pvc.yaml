@@ -1,0 +1,18 @@
+{{- if .Values.storage.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ssh-portfolio-pvc
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: ssh-portfolio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  {{- if .Values.storage.storageClass }}
+  storageClassName: {{ .Values.storage.storageClass }}
+  {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.storage.size }}
+{{- end }}

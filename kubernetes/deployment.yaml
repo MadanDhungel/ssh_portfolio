@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssh-portfolio
+  namespace: ssh-portfolio
+  labels:
+    app: ssh-portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssh-portfolio
+  template:
+    metadata:
+      labels:
+        app: ssh-portfolio
+    spec:
+      containers:
+      - name: ssh-portfolio
+        image: ssh-portfolio:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 22
+          name: ssh
+          protocol: TCP
+        env:
+        - name: SSH_PORT
+          value: "22"
+        - name: SSH_HOST_KEY_PATH
+          value: /ssh-keys/vmid_rsa
+        volumeMounts:
+        - name: ssh-keys
+          mountPath: /ssh-keys
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        livenessProbe:
+          tcpSocket:
+            port: 2222
+          initialDelaySeconds: 10
+          periodSeconds: 30
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          tcpSocket:
+            port: 2222
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 3
+          failureThreshold: 2
+      volumes:
+      - name: ssh-keys
+        persistentVolumeClaim:
+          claimName: ssh-portfolio-pvc

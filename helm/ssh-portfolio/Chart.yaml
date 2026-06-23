@@ -1,0 +1,16 @@
+apiVersion: v2
+name: ssh-portfolio
+description: A Helm chart for SSH Portfolio - DevOps Engineer Portfolio accessible via SSH
+type: application
+version: 1.0.0
+appVersion: 1.0.0
+keywords:
+  - ssh
+  - portfolio
+  - devops
+maintainers:
+  - name: Madan Dhungel
+    email: madandhungel08@gmail.com
+home: https://madandhungel.com.np
+sources:
+  - https://github.com/MadanDhungel/ssh-portfolio

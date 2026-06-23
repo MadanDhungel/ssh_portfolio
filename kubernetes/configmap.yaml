@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ssh-portfolio-info
+  namespace: ssh-portfolio
+data:
+  title: "SSH Portfolio - Madan Dhungel"
+  description: "DevOps Engineer Portfolio accessible via SSH"
+  port: "2222"

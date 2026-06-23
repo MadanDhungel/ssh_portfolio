@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+.docker/
+docker-compose.override.yaml
+
+# Kubernetes
+kubeconfig
+
+# Helm
+charts/
+*.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# SSH keys
+**/ssh_keys/
+**/ssh-keys/
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Poetry
+poetry.lock

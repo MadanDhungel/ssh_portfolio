@@ -1,0 +1,94 @@
+# Default values for ssh-portfolio Helm chart
+
+# Namespace configuration
+namespace:
+  name: ssh-portfolio
+  create: true
+
+# Image configuration
+image:
+  repository: ssh-portfolio
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Replica count
+replicaCount: 1
+
+# Service configuration
+service:
+  type: LoadBalancer
+  port: 22
+  targetPort: 22
+  # For NodePort, set type: NodePort and uncomment nodePort
+  # nodePort: 30222
+
+# SSH configuration
+ssh:
+  port: 22
+  hostKeyPath: /ssh-keys/vmid_rsa
+
+# Storage configuration
+storage:
+  enabled: true
+  size: 1Gi
+  storageClass: ""  # Use default storage class if empty
+
+# Pod configuration
+podAnnotations: {}
+
+podSecurityContext:
+  runAsNonRoot: false
+  fsGroup: 0
+
+securityContext:
+  allowPrivilegeEscalation: true
+
+# Resource limits and requests
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+# Probes configuration
+livenessProbe:
+  enabled: true
+  tcpSocket:
+    port: 2222
+  initialDelaySeconds: 10
+  periodSeconds: 30
+  timeoutSeconds: 5
+  failureThreshold: 3
+
+readinessProbe:
+  enabled: true
+  tcpSocket:
+    port: 2222
+  initialDelaySeconds: 5
+  periodSeconds: 10
+  timeoutSeconds: 3
+  failureThreshold: 2
+
+# Autoscaling
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
+
+# Node affinity
+nodeSelector: {}
+
+# Tolerations
+tolerations: []
+
+# Affinity
+affinity: {}
+
+# ConfigMap data
+configMap:
+  title: "SSH Portfolio - Madan Dhungel"
+  description: "DevOps Engineer Portfolio accessible via SSH"
+  port: "2222"

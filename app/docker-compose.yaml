@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  ssh-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "22:22"
+    environment:
+      SSH_PORT: "22"
+      SSH_HOST_KEY_PATH: /ssh-keys/vmid_rsa
+    volumes:
+      - ssh-keys-volume:/ssh-keys
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "nc", "-zv", "localhost", "22"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  ssh-keys-volume:
+    driver: local
