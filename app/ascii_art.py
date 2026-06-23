@@ -106,14 +106,14 @@ TOOLS_ICONS = {
 }
 
 DEVOPS_BANNER = f"""{Colors.CYAN}{Colors.BOLD}
-╔══════════════════════════════════════════════════════════════════════════╗
-║                                                                          ║
-║         {Colors.YELLOW}🚀  DEVOPS ENGINEER - COMPLETE PORTFOLIO  🚀{Colors.CYAN}         ║
-║                                                                          ║
-║          {Colors.GREEN}🏆 AWS Certified • 🐳 Container Expert • ☸ K8s Master{Colors.CYAN}          ║
-║                  {Colors.MAGENTA}🔐 Infrastructure as Code • 🔄 CI/CD{Colors.CYAN}                  ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
+╔═════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                             ║
+║{Colors.YELLOW}🚀  DEVOPS ENGINEER - COMPLETE PORTFOLIO  🚀{Colors.CYAN}                    ║
+║                                                                                             ║
+║{Colors.GREEN}🏆 AWS Certified • 🐳 Container Expert • ☸ K8s Master{Colors.CYAN}            ║
+║{Colors.MAGENTA}🔐 Infrastructure as Code • 🔄 CI/CD{Colors.CYAN}                           ║
+║                                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════════════════════╝
 {Colors.RESET}"""
 
 SECTION_DIVIDER = f"{Colors.CYAN}{'═' * 80}{Colors.RESET}"
