@@ -23,9 +23,3 @@ CERTIFICATIONS = f"""{Colors.GREEN}{Colors.BOLD}🏆 Certifications & Achievemen
 {skill_item(keyword('Technology') + ' & DIY Projects')}
 {skill_item(keyword('Communication') + ' & Knowledge Sharing')}
 """
-
-{Colors.GREEN}{Colors.BOLD}⚡ Interests:{Colors.RESET}
-{skill_item('Reading and Literature')}
-{skill_item('Technology and DIY Projects')}
-{skill_item('Communication and Collaboration')}
-"""
