@@ -1,5 +1,5 @@
 image:
-  repository: madandhungel/ssh-portfolio
+  repository: madandhungel/ssh_portfolio
   tag: latest
   pullPolicy: IfNotPresent
 
