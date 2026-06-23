@@ -1,10 +1,10 @@
 namespace:
-  name: ssh-portfolio
+  name: portfolio
   create: true
 
 # Image configuration
 image:
-  repository: ssh-portfolio
+  repository: madandhungel/ssh-portfolio
   tag: latest
   pullPolicy: IfNotPresent
 
