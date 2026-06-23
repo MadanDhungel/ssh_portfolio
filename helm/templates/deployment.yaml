@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ssh-portfolio
-  namespace: {{ .Values.namespace.name }}
   labels:
     app: ssh-portfolio
     version: {{ .Chart.AppVersion }}
