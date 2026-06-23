@@ -1,0 +1,19 @@
+{
+  "yaml.schemas": {
+    "kubernetes": [
+      "kubernetes/**/*.yaml",
+      "helm/**/*.yaml"
+    ]
+  },
+  "yaml.validate": true,
+  "yaml.schemaStore.enable": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {}
+  },
+  "files.associations": {
+    "templates/*.yaml": "yaml",
+    "*.yaml": "yaml"
+  }
+}

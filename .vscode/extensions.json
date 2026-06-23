@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "ms-kubernetes-tools.vscode-helm",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "redhat.vscode-yaml",
+    "ms-vscode.makefile-tools"
+  ]
+}
