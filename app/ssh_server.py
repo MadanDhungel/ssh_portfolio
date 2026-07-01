@@ -82,7 +82,7 @@ async def handle_client(process: asyncssh.SSHServerProcess) -> None:
     welcome = f"""{Colors.CYAN}{Colors.BOLD}
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║            {Colors.YELLOW}🚀  DEVOPS ENGINEER - COMPLETE PORTFOLIO  🚀{Colors.CYAN}            ║
+║            {Colors.YELLOW}🚀  DEVOPS ENGINEER - SSH PORTFOLIO  🚀{Colors.CYAN}                ║
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝{Colors.RESET}
 """
