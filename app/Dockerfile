@@ -13,8 +13,8 @@ RUN mkdir -p /root/.ssh
 # Mount this as a volume if you want the host key (and therefore the
 # "known_hosts" fingerprint) to stay the same across container restarts.
 ENV SSH_HOST_KEY_PATH=/root/.ssh/vmid_rsa
-ENV SSH_PORT=22
+ENV SSH_PORT=2222
 
-EXPOSE 22
+EXPOSE 2222
 
 CMD ["python", "ssh_server.py"]

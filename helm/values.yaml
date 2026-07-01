@@ -9,14 +9,14 @@ replicaCount: 1
 # Service configuration
 service:
   type: LoadBalancer
-  port: 22
-  targetPort: 22
+  port: 2222
+  targetPort: 2222
   # For NodePort, set type: NodePort and uncomment nodePort
   # nodePort: 30222
 
 # SSH configuration
 ssh:
-  port: 22
+  port: 2222
   hostKeyPath: /ssh-keys/vmid_rsa
 
 # Storage configuration
